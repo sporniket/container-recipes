@@ -1,9 +1,18 @@
 # ======== PREFLIGHT : base system ========
 FROM ubuntu:22.04
 
-# TODO : add build essentials, cmake ?
+# beyond update all the packages, install
+# - xz-utils to unpack the archives
+# - build-essential gcc and make
+# - clang* c/cpp tools, Language Server Implementation
+#
+# TODO
+# - python 3 ? to install compdb later with pipx install compdb
+# - required dependencies to build and install Hatari with emutos
+# - required dependencies to build/install pulsar (or just get the deb package)
+
 RUN apt-get update && \
-    apt-get install -y xz-utils && \
+    apt-get install -y xz-utils build-essential clang clangd clang-tidy clang-format && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
