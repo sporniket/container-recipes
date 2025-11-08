@@ -1,5 +1,18 @@
 # Basic packages
 
+My selection : 
+
+```
+repository/
+├── binutils-2.44-mintelf-20250415-bin-linux64.tar.xz
+├── fdlibm-20240425-mintelf-dev.tar.xz
+├── gcc-15.2.0-mintelf-20250810-bin-linux64.tar.xz
+├── gdb-17.0-mintelf-20250415-bin-linux64.tar.xz
+├── gemlib-0.44.0-mintelf-20240425-dev.tar.xz
+├── mintbin-0.4-mintelf-20230911-bin-linux64.tar.xz
+└── mintlib-0.60.1-mintelf-20240718-dev.tar.xz
+```
+
 ## binutils
 
 The binutils are a collection of low-level language tools.
