@@ -19,10 +19,15 @@ docker build -t my-freemint-cross-tools .
 _Given that the root folder of your project is `/my/computer/my/project`_
 
 ```
-docker run -it -v "/my/computer/my/project:/home/project" my-freemint-cross-tools
+docker run -it -v "/my/computer/my/project:/home/project" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY \
+    -v /dev/snd:/dev/snd \
+    my-freemint-cross-tools
 ```
 
 ## Windows
+
+> TODO : maybe run using WSL because of /dev/snd and /
 
 _Given that the root folder of your project is `C:/my/computer/my/project`_
 
