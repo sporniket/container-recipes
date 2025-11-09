@@ -1,4 +1,6 @@
-# How to create and start the container with docker ?
+# How to create and start the container ?
+
+> Instruction are given using `docker`, and it works the same with `podman`.
 
 ## Create the container
 
