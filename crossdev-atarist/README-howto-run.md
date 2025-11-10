@@ -1,13 +1,13 @@
 # How to create and start the container ?
 
-> Instruction are given using `docker`, and it works the same with `podman`.
+> Instruction are given using `podman`, and it works the same with `docker`.
 
 ## Create the container
 
 _It is assumed that the folder `repository` already contains all the required archives_
 
 ```
-docker build -t my-freemint-cross-tools .
+podman build -t my-freemint-cross-tools .
 ```
 
 ## Start the container
@@ -19,7 +19,7 @@ docker build -t my-freemint-cross-tools .
 _Given that the root folder of your project is `/my/computer/my/project`_
 
 ```
-docker run -it -v "/my/computer/my/project:/home/project" \
+podman run -it -v "/my/computer/my/project:/home/project" \
     -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY \
     -v /dev/snd:/dev/snd \
     my-freemint-cross-tools
@@ -32,7 +32,7 @@ docker run -it -v "/my/computer/my/project:/home/project" \
 _Given that the root folder of your project is `C:/my/computer/my/project`_
 
 ```
-docker run -it -v "C:/my/computer/my/project:/home/project" my-freemint-cross-tools
+podman run -it -v "C:/my/computer/my/project:/home/project" my-freemint-cross-tools
 ```
 
 
