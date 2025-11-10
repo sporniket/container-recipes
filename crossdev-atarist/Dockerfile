@@ -1,5 +1,13 @@
+# ======== Build parameterization ========
+
+# Base OS, select a debian-based distribution
+# This is because I use *.deb packages
+# Also note, I primarily work on ubuntu, some package MAY be specific ? TO BE CHECKED.
+ARG BASE_OS_NAME=ubuntu
+ARG BASE_OS_VERSION=24.04
+
 # ======== PREFLIGHT : base system ========
-FROM ubuntu:22.04
+FROM ${BASE_OS_NAME}:${BASE_OS_VERSION}
 
 # Which packages are installed, and why :
 # - xz-utils : to unpack the archives
