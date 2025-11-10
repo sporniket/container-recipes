@@ -12,6 +12,7 @@ _This recipe requires a **debian based** image, because I use `apt-*` tools for 
 - `clangd` : Language Server Protocol (LSP) implementation for C/C++
 - `cmake` : build tool
 - `libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev libudev-dev libcapstone-dev` : dev libraries initially added to compile Hatari
+- `pipx` : to install `compdb`
 
 ## How to build 
 

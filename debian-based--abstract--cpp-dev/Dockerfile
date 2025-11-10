@@ -18,6 +18,10 @@ RUN apt-get update && \
             clangd \
             cmake \
             libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev \
+            pipx \
     && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    pipx ensurepath && \
+    pipx install compdb
+
