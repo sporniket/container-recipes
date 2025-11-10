@@ -22,7 +22,7 @@ FROM ${BASE_OS_NAME}:${BASE_OS_VERSION}
 # - cmake : build tool for hatari
 # - libsdl2-dev zlib1g-dev libpng-dev
 #       libreadline-dev libx11-dev libportmidi-dev 
-#       libreadline-dev libx11-dev libportmidi-dev  : dev libraries to compile Hatari
+#       libudev-dev libcapstone-dev : dev libraries to compile Hatari
 #
 # TODO
 # - python 3 ? to install compdb later with pipx install compdb
@@ -42,7 +42,7 @@ RUN apt-get update && \
             clang clang-tidy clang-format \
             clangd \
             cmake \
-            libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev libreadline-dev libx11-dev libportmidi-dev \
+            libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
