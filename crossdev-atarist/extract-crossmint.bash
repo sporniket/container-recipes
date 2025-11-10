@@ -5,7 +5,7 @@ set -e
 
 echo "Start extracting archives..."
 
-for archive_file in /tmp/archives/*.tar.xz; do
+for archive_file in /tmp/crossmint/*.tar.xz; do
     if [ -f "$archive_file" ]; then
         echo "Extracting $(basename "$archive_file")..."
         
@@ -14,7 +14,7 @@ for archive_file in /tmp/archives/*.tar.xz; do
         # -C / to extract into root
         tar -xJpf "$archive_file" -C / --overwrite
         
-        echo "✓ $(basename "$archive_file") successfully extracted"
+        echo "OK : $(basename "$archive_file") successfully extracted"
     fi
 done
 

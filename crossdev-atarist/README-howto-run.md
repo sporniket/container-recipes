@@ -27,7 +27,7 @@ docker run -it -v "/my/computer/my/project:/home/project" \
 
 ## Windows
 
-> TODO : maybe run using WSL because of /dev/snd and /
+> TODO : maybe run using WSL because of /dev/snd and /
 
 _Given that the root folder of your project is `C:/my/computer/my/project`_
 

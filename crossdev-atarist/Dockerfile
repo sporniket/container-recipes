@@ -47,20 +47,16 @@ RUN git clone https://github.com/hatari/hatari.git && \
     rm -rf hatari
 
 # ======== STEP : prepare and extract Freemint crosstools archives ========
-WORKDIR /tmp/archives
+WORKDIR /tmp/crossmint
 
-# TODO : explicit list of archives, not needed now because curated by myself.
-# TODO : this may require a generator of Dockerfile to get a taylored content.
-COPY repository/*.tar.xz ./
+COPY cache-crossmint/*.tar.xz ./
 
 # -- extraction
-COPY extract-archives.bash /tmp/
+COPY extract-crossmint.bash /tmp/
 
-RUN chmod +x /tmp/extract-archives.bash && \
-    /tmp/extract-archives.bash
-
-# -- cleanstep
-RUN rm -rf /tmp/archives /tmp/extract-archives.bash
+RUN chmod +x /tmp/extract-crossmint.bash && \
+    /tmp/extract-crossmint.bash && \
+    rm -rf /tmp/crossmint /tmp/extract-crossmint.bash
 
 # ======== STEP : prepare working directory ========
 # (to be mounted from the host's current working directory)

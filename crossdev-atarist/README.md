@@ -1,15 +1,13 @@
-# Generate a Docker image with Freemint's cross-tools from tho-otto.de
+# Generate a Docker image to develop applications for the vintage Atari ST
 
-_See [the m68k-atari-mint cross-tools page from tho-otto.de](https://tho-otto.de/crossmint.php)_
+In a nutshell, the container aims to provide : 
 
-In a nutshell, the dockerfile copies a series of archives (*.tar.xz) from the `repository` folder (host) into `/tmp/archives` on the host, 
-as well as an extraction script. The archives are uncompressed into the root of the container. (I trust the archives).
-
-Then, the toolchain is available through the interactive shell of the container.
+* Freemint's cross tools, using premade binaries : _[the m68k-atari-mint cross-tools page from tho-otto.de](https://tho-otto.de/crossmint.php)_
+* The [Hatari](https://www.hatari-emu.org/) emulator, to test apps. The provided ROM is [Emutos](https://emutos.sourceforge.io/).
+* (TO BE DONE) [Pulsar, a community-led hackable editor](https://pulsar-edit.dev/) with some plugins for source editing with some IDE-ish features.
 
 
 ## TODO
 
-* Install build essentials and other tools (e.g. cmake, clang-format, etc...)
 * To have an IDE with navigable source code, I consider including the Pulsar editor
-* To be complete and propose a runtime environment, I consider including Hatari, with some given configuration files and launcher to start typical configuration (model, RAM, emulated GEMDOS drive,...). Sound capability is a goal, but not at first.
+* Some ready to use hatari configuration, with an emulated GEMDOS drive where one can copy the application for actual testing.
