@@ -6,11 +6,15 @@
 ARG BASE_OS_NAME=ubuntu
 ARG BASE_OS_VERSION=24.04
 
+# Emutos paramterization
+ARG ETOS_SIZE=1024k
+ARG ETOS_VERSION=1.4
+
 # ======== PREFLIGHT : base system ========
 FROM ${BASE_OS_NAME}:${BASE_OS_VERSION}
 
 # Which packages are installed, and why :
-# - xz-utils : to unpack the archives
+# - xz-utils unzip : to unpack archives
 # - git : to clone hatari
 # - build-essential : gcc and make
 # - clang clang-tidy clang-format : tools for C/C++
@@ -32,7 +36,7 @@ FROM ${BASE_OS_NAME}:${BASE_OS_VERSION}
 
 RUN apt-get update && \
     apt-get install -y \
-            xz-utils \
+            xz-utils unzip \
             git \
             build-essential \
             clang clang-tidy clang-format \
@@ -44,15 +48,27 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # ======== STEP : clone, compile and install Hatari ========
-WORKDIR /tmp/from-github
+WORKDIR /tmp/build-hatari
+
+# Emutos paramterization
+# Duplicated here because initial statement seems "forgotten"
+ARG ETOS_SIZE=1024k
+ARG ETOS_VERSION=1.4
+
+COPY extract-emutos.bash cache-emutos/emutos-${ETOS_SIZE}-${ETOS_VERSION}.zip ./
+
 RUN git clone https://github.com/hatari/hatari.git && \
     cd hatari && \
     cmake -Bbuild && \
     cmake --build build && \
     cmake --build build -- help && \
     cmake --build build -- install && \
-    cd .. && \
-    rm -rf hatari
+    cd /tmp/build-hatari && \
+    chmod +x extract-emutos.bash && \
+    /tmp/build-hatari/extract-emutos.bash "${ETOS_SIZE}" "${ETOS_VERSION}" && \
+    cd /tmp && \
+    rm -rf /tmp/build-hatari
+
 
 # ======== STEP : prepare and extract Freemint crosstools archives ========
 WORKDIR /tmp/crossmint
