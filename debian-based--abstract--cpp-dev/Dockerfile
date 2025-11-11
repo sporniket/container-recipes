@@ -19,6 +19,7 @@ RUN apt-get update && \
             cmake \
             libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev \
             pipx \
+            vim nano micro \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \

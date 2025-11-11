@@ -13,6 +13,7 @@ _This recipe requires a **debian based** image, because I use `apt-*` tools for 
 - `cmake` : build tool
 - `libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev libudev-dev libcapstone-dev` : dev libraries initially added to compile Hatari
 - `pipx` : to install `compdb`
+- `vim nano micro` : basic editing in terminal, with the comfort of syntax coloring
 
 ## How to build 
 
