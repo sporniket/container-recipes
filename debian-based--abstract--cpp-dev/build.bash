@@ -5,7 +5,7 @@
 # -----------------------------------------
 #
 
-if [$# -ne 1]; then
+if [ $# -ne 3 ]; then
     echo "Usage: build.bash <base_os_image_name> <version_tag> <release_id>"
     echo
     echo "  * base_os_image_name : name of a container based on a debian-based "
