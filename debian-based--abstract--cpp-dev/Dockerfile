@@ -23,6 +23,7 @@ RUN apt-get update && \
             clangd \
             cmake \
             libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev \
+            libcriterion-dev \
             pipx \
             vim nano micro \
     && \
