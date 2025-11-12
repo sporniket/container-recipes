@@ -12,6 +12,8 @@ _This recipe requires a **debian based** image, because I use `apt-*` tools for 
 
 Added libcriterion to write test suites.
 
+* Patch 1 : fixed semver number
+
 ### v0.1
 
 Initial "good enough version"
