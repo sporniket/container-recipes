@@ -1,6 +1,10 @@
 # container-recipes
 A collection of container recipes to solves my various problems
 
+> (c) 2025 David SPORN,
+>
+> SPDX-License-Identifier: GPL-3.0-or-later
+
 ## LICENCE
 
 I will put proper licence file and notices later, but basically, all is GPL v3 or later.

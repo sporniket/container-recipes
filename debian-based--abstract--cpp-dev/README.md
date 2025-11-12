@@ -1,5 +1,9 @@
 # Make a base container for general c/c++ development
 
+> (c) 2025 David SPORN,
+>
+> SPDX-License-Identifier: GPL-3.0-or-later
+
 _This recipe requires a **debian based** image, because I use `apt-*` tools for package management_
 
 ## Which packages are installed, and why
