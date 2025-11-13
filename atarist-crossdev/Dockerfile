@@ -3,57 +3,24 @@
 # Base OS, select a debian-based distribution
 # This is because I use *.deb packages
 # Also note, I primarily work on ubuntu, some package MAY be specific ? TO BE CHECKED.
-ARG BASE_OS_NAME=ubuntu
-ARG BASE_OS_VERSION=24.04
+ARG BASE_IMAGE_NAME=abstract--cpp-dev--ubuntu-24.04
+ARG BASE_IMAGE_VERSION=0.2.1
 
 # Emutos paramterization
 ARG ETOS_SIZE=1024k
 ARG ETOS_VERSION=1.4
 
 # ======== PREFLIGHT : base system ========
-FROM ${BASE_OS_NAME}:${BASE_OS_VERSION}
-
-# Which packages are installed, and why :
-# - xz-utils unzip : to unpack archives
-# - git : to clone hatari
-# - build-essential : gcc and make
-# - clang clang-tidy clang-format : tools for C/C++
-# - clangd : Language Server Protocol (LSP) implementation for C/C++
-# - cmake : build tool for hatari
-# - libsdl2-dev zlib1g-dev libpng-dev
-#       libreadline-dev libx11-dev libportmidi-dev 
-#       libudev-dev libcapstone-dev : dev libraries to compile Hatari
-#
-# TODO
-# - python 3 ? to install compdb later with pipx install compdb
-# - required dependencies to build and install Hatari with emutos
-# - required dependencies to build/install pulsar (or just get the deb package)
-#
-# NOTES
-# Hatari compiling : 
-#     IPF support libraries not installed. Seems to be a hassle to get (the version to use is there https://www.kryoflux.com/?page=download)
-#     Not my priority since I am not the target audience of IPF disk images.
-
-RUN apt-get update && \
-    apt-get install -y \
-            xz-utils unzip \
-            git \
-            build-essential \
-            clang clang-tidy clang-format \
-            clangd \
-            cmake \
-            libsdl2-dev zlib1g-dev libpng-dev libreadline-dev libx11-dev libportmidi-dev \
-    && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_VERSION}
 
 # ======== STEP : clone, compile and install Hatari ========
 WORKDIR /tmp/build-hatari
 
 # Emutos paramterization
-# Duplicated here because initial statement seems "forgotten"
-ARG ETOS_SIZE=1024k
-ARG ETOS_VERSION=1.4
+# See https://github.com/moby/moby/issues/37345#issuecomment-400245466
+# Will use global parameters from the beginning
+ARG ETOS_SIZE
+ARG ETOS_VERSION
 
 COPY extract-emutos.bash cache-emutos/emutos-${ETOS_SIZE}-${ETOS_VERSION}.zip ./
 
