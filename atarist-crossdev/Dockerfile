@@ -1,8 +1,11 @@
+# =========================================
+# (c) 2025 David SPORN,
+# SPDX-License-Identifier: GPL-3.0-or-later
+# -----------------------------------------
+#
 # ======== Build parameterization ========
 
-# Base OS, select a debian-based distribution
-# This is because I use *.deb packages
-# Also note, I primarily work on ubuntu, some package MAY be specific ? TO BE CHECKED.
+# Base image : name and version (tag)
 ARG BASE_IMAGE_NAME=abstract--cpp-dev--ubuntu-24.04
 ARG BASE_IMAGE_VERSION=0.2.1
 
