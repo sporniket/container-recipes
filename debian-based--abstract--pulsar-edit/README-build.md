@@ -36,7 +36,6 @@ build.bash <base_image_name> <base_image_version> <release_suffix> <release_id> 
 ## Sample call
 
 ```shell
-# sample call
 build.bash localhost/abstract--cpp-dev--debian-13.1 0.2.1 debian 0.0.1-SNAPSHOT
 ```
 
