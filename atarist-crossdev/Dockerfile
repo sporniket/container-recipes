@@ -25,7 +25,7 @@ WORKDIR /tmp/build-hatari
 ARG ETOS_SIZE
 ARG ETOS_VERSION
 
-COPY extract-emutos.bash cache-emutos/emutos-${ETOS_SIZE}-${ETOS_VERSION}.zip ./
+COPY cache-scripts/extract-emutos.bash cache-emutos/emutos-${ETOS_SIZE}-${ETOS_VERSION}.zip ./
 
 RUN git clone https://github.com/hatari/hatari.git && \
     cd hatari && \
@@ -43,13 +43,11 @@ RUN git clone https://github.com/hatari/hatari.git && \
 # ======== STEP : prepare and extract Freemint crosstools archives ========
 WORKDIR /tmp/crossmint
 
-COPY cache-crossmint/*.tar.xz ./
+COPY cache-scripts/extract-crossmint.bash cache-crossmint/*.tar.xz ./
 
-# -- extraction
-COPY extract-crossmint.bash /tmp/
-
-RUN chmod +x /tmp/extract-crossmint.bash && \
-    /tmp/extract-crossmint.bash && \
+RUN chmod +x /tmp/crossmint/extract-crossmint.bash && \
+    /tmp/crossmint/extract-crossmint.bash && \
+    cd /tmp && \
     rm -rf /tmp/crossmint /tmp/extract-crossmint.bash
 
 # ======== STEP : prepare working directory ========

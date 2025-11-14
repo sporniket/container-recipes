@@ -5,10 +5,6 @@
 # -----------------------------------------
 #
 
-# usage: 
-#   build.bash <base_image_name> <base_image_version> <name_suffix> <tag_version> [args...]
-
-
 if [ $# -lt 4 ]; then
     echo "Usage: build.bash <base_image_name> <base_image_version> <release_suffix> <release_id> [args...]"
     echo
