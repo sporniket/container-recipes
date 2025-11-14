@@ -35,7 +35,6 @@ build.bash <base_os_image_name> <version_tag> <release_id> [args...]
 ### Sample call
 
 ```shell
-# sample call
 build.bash ubuntu 24.04 0.0.1-SNAPSHOT --network=host
 ```
 
