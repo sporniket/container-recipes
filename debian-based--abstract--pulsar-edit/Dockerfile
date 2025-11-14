@@ -19,12 +19,9 @@ WORKDIR /tmp/install-pulsar
 COPY cache-pulsar/*.deb ./
 
 RUN apt-get update && \
-    echo "installing dependencies for pulsar-edit..." && \
     apt-get install -y libnotify4 libnss3 xdg-utils libsecret-1-0 && \
-    echo "installing pulsar..." && \
     dpkg -i /tmp/install-pulsar/*.deb && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
-    echo "installing pulsar plugins..." && \
-    ppm install --verbose pulsar-ide-clangd atom-ide-definitions atom-ide-hyperclick x-terminal-reloaded busy-signal file-icons 
+    ppm install pulsar-ide-clangd atom-ide-definitions atom-ide-hyperclick x-terminal-reloaded busy-signal file-icons 
 
