@@ -33,9 +33,10 @@ base_os_image_name="$1"
 version_tag="$2"
 release_id="$3"
 shift 3
-tag_name="abstract--cpp-dev--${base_os_image_name}-${version_tag}:${release_id}"
+tag_name_release="abstract--cpp-dev--${base_os_image_name}-${version_tag}:${release_id}"
+tag_name_latest="abstract--cpp-dev--${base_os_image_name}-${version_tag}:latest"
 
-args="--build-arg BASE_OS_NAME=${base_os_image_name} --build-arg BASE_OS_VERSION=${version_tag} -t ${tag_name}"
+args="--build-arg BASE_OS_NAME=${base_os_image_name} --build-arg BASE_OS_VERSION=${version_tag} -t ${tag_name_release} -t ${tag_name_latest}"
 
 set -x
 podman build $args "$@" .
