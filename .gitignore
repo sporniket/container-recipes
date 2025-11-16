@@ -8,6 +8,8 @@
 *.app
 *.acc
 
+# ignore cmake artifact (sample workspace for crossdev)
+build
 
 
 ### END of custom part by sporniket

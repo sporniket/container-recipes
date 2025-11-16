@@ -1,0 +1,34 @@
+[
+{
+  "directory": "/home/project/tmp_cmake_hlo_tos/build",
+  "command": "m68k-atari-mintelf-g++ -I/home/project/tmp_cmake_hlo_tos/./include -std=gnu++23 -Wall -Wextra -Wpedantic -o CMakeFiles/hlo_tos.prg.dir/src/__main__.cpp.o -c /home/project/tmp_cmake_hlo_tos/src/__main__.cpp",
+  "file": "/home/project/tmp_cmake_hlo_tos/src/__main__.cpp",
+  "output": "CMakeFiles/hlo_tos.prg.dir/src/__main__.cpp.o"
+},
+
+{
+  "directory": "/home/project/tmp_cmake_hlo_tos/build",
+  "command": "m68k-atari-mintelf-g++ -I/home/project/tmp_cmake_hlo_tos/./include -std=gnu++23 -Wall -Wextra -Wpedantic -o CMakeFiles/hlo_tos.prg.dir/src/hello.cpp.o -c /home/project/tmp_cmake_hlo_tos/src/hello.cpp",
+  "file": "/home/project/tmp_cmake_hlo_tos/src/hello.cpp",
+  "output": "CMakeFiles/hlo_tos.prg.dir/src/hello.cpp.o"
+},
+
+{
+  "directory": "/home/project/tmp_cmake_hlo_tos/build",
+  "command": "m68k-atari-mintelf-g++ -I/home/project/tmp_cmake_hlo_tos/./include -std=gnu++23 -Wall -Wextra -Wpedantic -o CMakeFiles/hlo_tos.prg.dir/src/wait.cpp.o -c /home/project/tmp_cmake_hlo_tos/src/wait.cpp",
+  "file": "/home/project/tmp_cmake_hlo_tos/src/wait.cpp",
+  "output": "CMakeFiles/hlo_tos.prg.dir/src/wait.cpp.o"
+},
+
+{
+  "directory": "/home/project/tmp_cmake_hlo_tos/build",
+  "command": "m68k-atari-mintelf-g++ -I/home/project/tmp_cmake_hlo_tos/./include -std=gnu++23 -Wall -Wextra -Wpedantic -c /home/project/tmp_cmake_hlo_tos/include/hello.hpp",
+  "file": "/home/project/tmp_cmake_hlo_tos/include/hello.hpp"
+},
+
+{
+  "directory": "/home/project/tmp_cmake_hlo_tos/build",
+  "command": "m68k-atari-mintelf-g++ -I/home/project/tmp_cmake_hlo_tos/./include -std=gnu++23 -Wall -Wextra -Wpedantic -c /home/project/tmp_cmake_hlo_tos/include/wait.hpp",
+  "file": "/home/project/tmp_cmake_hlo_tos/include/wait.hpp"
+}
+]
