@@ -4,7 +4,7 @@
 // -----------------------------------------
 
 #include <iostream>
-#include "hello.hpp"
+#include "wait.hpp"
 
 void waitForSomeTime() {
     int whatever = 0 ;
