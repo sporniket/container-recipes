@@ -30,5 +30,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     pipx ensurepath && \
-    pipx install compdb
-
+    pipx install compdb && \
+    echo 'export PATH="/root/.local/bin:$PATH"' >> /root/.bash_aliases

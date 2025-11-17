@@ -17,6 +17,8 @@ In a nutshell, the container aims to provide :
 
 Initial "good enough version"
 
+* Patch 1 : upgrade to base image _abstract--pulsar-edit--*:0.1.1_
+
 ## Which archive are installed, and why
 
 _See [cache-crossmint/README.md](.cache-crossmint/README.md) for the details of my own selection_.

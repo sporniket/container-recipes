@@ -40,8 +40,8 @@ base_image_version="$2"
 release_suffix="$3"
 release_id="$4"
 shift 4
-tag_name_release="debian-based--abstract--pulsar-edit--${release_suffix}:${release_id}"
-tag_name_latest="debian-based--abstract--pulsar-edit--${release_suffix}:latest"
+tag_name_release="abstract--pulsar-edit--${release_suffix}:${release_id}"
+tag_name_latest="abstract--pulsar-edit--${release_suffix}:latest"
 
 args="--build-arg BASE_IMAGE_NAME=${base_image_name} --build-arg BASE_IMAGE_VERSION=${base_image_version} -t ${tag_name_release} -t ${tag_name_latest}"
 

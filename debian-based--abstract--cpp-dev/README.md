@@ -13,6 +13,8 @@ _This recipe requires a **debian based** image, because I use `apt-*` tools for 
 Added libcriterion to write test suites.
 
 * Patch 1 : fixed semver number
+* Patch 2 : 
+  * Resolves #11 : [debian-based--abstract--cpp-dev] update PATH to have access to compdb
 
 ### v0.1
 

@@ -18,6 +18,10 @@ The package of the version to install is to be downloaded into the `cache-pulsar
 
 Initial "good enough version"
 
+* Patch 1 : 
+  * upgrade to base image _abstract--cpp-dev--*:0.2.2_
+  * shorten the name of the build image to _abstract--pulsar-edit--*_ (was: _debian-based--abstract--pulsar-edit--*_)
+
 ## Which plugins are installed, and why
 
 - `pulsar-ide-clangd atom-ide-definitions atom-ide-hyperclick busy-signal` : A set of plugins to get IDE-like features for C/C++ dev (code navigation) ; see [this article](https://medium.com/@sporniket.studio/taming-pulsar-the-community-led-hyper-hackable-text-editor-part-4-aaf352b4ca09)
