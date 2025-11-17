@@ -19,6 +19,7 @@ message("export compile command is ${CMAKE_EXPORT_COMPILE_COMMANDS}")
 
 # ======== [Cross compiling stuff]
 # the name of the target operating system
+# (There are some target known by cmake, but not this one)
 set(CMAKE_SYSTEM_NAME Atari)
 
 # which compilers to use for C and C++
@@ -52,4 +53,3 @@ target_include_directories(
     ${BINARY} PUBLIC
     ./include
 )
-

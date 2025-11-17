@@ -12,4 +12,3 @@ int main() {
     waitForSomeTime();
     return 0;
 }
-
