@@ -10,7 +10,7 @@
 
 # ignore cmake artifact (sample workspace for crossdev)
 build
-
+compile_commands.json
 
 ### END of custom part by sporniket
 
