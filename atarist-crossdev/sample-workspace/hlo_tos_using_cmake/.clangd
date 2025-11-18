@@ -1,0 +1,7 @@
+CompileFlags:
+  Add: [
+    -I,
+    /usr/m68k-atari-mintelf/sys-root/usr/include/c++/15,
+    -I,
+    /usr/m68k-atari-mintelf/sys-root/usr/include
+  ]

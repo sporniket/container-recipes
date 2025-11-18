@@ -8,9 +8,10 @@
 *.app
 *.acc
 
-# ignore cmake artifact (sample workspace for crossdev)
+# ignore cmake/clangd artifact (sample workspace for crossdev)
 build
 compile_commands.json
+.cache
 
 ### END of custom part by sporniket
 

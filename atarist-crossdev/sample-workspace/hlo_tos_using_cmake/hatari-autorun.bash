@@ -4,10 +4,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # -----------------------------------------
 #
-
 set -x
 
-cmake -Bbuild --toolchain ./CMakeToolchainMintelf.txt . --fresh
-compdb -p build/ list > compile_commands.json
+hatari drive_c/hlo_tos.prg
 
 set +x
