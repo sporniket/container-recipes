@@ -1,0 +1,24 @@
+# ========================================================================
+# (c) 2025 David SPORN,
+# SPDX-License-Identifier: GPL-3.0-or-later
+# ------------------------------------------------------------------------
+# Cross compiling settings
+# ------------------------------------------------------------------------
+# The template for this file :
+# https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-linux
+
+## Use 'Generic' as system name, because cmake does not know the name of an Atari system
+set(CMAKE_SYSTEM_NAME Generic)
+
+set(CMAKE_SYSROOT /usr/m68k-atari-mintelf/sys-root)
+## No idea if the following line is needed, just in case, I put it inside the mounted volume /home/project
+set(CMAKE_STAGING_PREFIX /home/project/stage)
+
+set(tools /usr/m68k-atari-mintelf)
+set(CMAKE_C_COMPILER ${tools}/bin/gcc)
+set(CMAKE_CXX_COMPILER ${tools}/bin/g++)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
